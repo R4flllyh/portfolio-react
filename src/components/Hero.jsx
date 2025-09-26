@@ -139,7 +139,7 @@ export default function Hero() {
         <div className="mx-auto max-w-6xl px-4 md:px-6 h-full flex flex-col justify-center">
           {/* kicker */}
           <p className="text-[11px] uppercase tracking-[0.28em] text-neutral-400 mb-6">
-            Frontend Developer
+            Let me introduce myself
           </p>
 
           {/* H1 berisi dua baris (masing2 akan di-split ke char) */}
@@ -171,7 +171,7 @@ export default function Hero() {
             ref={subRef}
             className="mt-6 max-w-2xl text-neutral-400 text-[15px] leading-relaxed"
           >
-            React-first. Animation-native. I ship fast, accessible, and delightful interfaces.
+            A Software Engineer passionate about building modern and scalable web applications.
           </p>
 
           {/* CTA */}
