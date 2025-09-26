@@ -135,7 +135,7 @@ export default function Hero() {
       </div>
 
       {/* pinned scene */}
-      <div ref={stageRef} className="relative h-screen overflow-hidden">
+      <div ref={stageRef} className="relative h-screen overflow-hidden pt-20">
         <div className="mx-auto max-w-6xl px-4 md:px-6 h-full flex flex-col justify-center">
           {/* kicker */}
           <p className="text-[11px] uppercase tracking-[0.28em] text-neutral-400 mb-6">
