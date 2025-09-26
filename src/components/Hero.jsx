@@ -175,20 +175,27 @@ export default function Hero() {
           </p>
 
           {/* CTA */}
-          <div ref={ctaRef} className="mt-8 flex items-center gap-4">
+          <div ref={ctaRef} className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#projects"
-              className="h-11 px-5 rounded-full text-sm border border-white hover:bg-white hover:text-black transition"
+              className="group inline-flex items-center justify-center h-12 px-6 rounded-full text-[15px] font-medium 
+                        border border-white/80 text-white bg-transparent 
+                        hover:bg-white hover:text-black transition-all duration-300 ease-out 
+                        shadow-[0_0_0_0_rgba(255,255,255,0)] hover:shadow-[0_0_20px_2px_rgba(255,255,255,0.25)]"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="h-11 px-5 rounded-full text-sm border border-white/40 hover:bg-white/10 transition"
+              className="group inline-flex items-center justify-center h-12 px-6 rounded-full text-[15px] font-medium 
+                        border border-white/30 text-white/80 bg-transparent 
+                        hover:border-white hover:text-white hover:bg-white/10 
+                        transition-all duration-300 ease-out"
             >
               Contact
             </a>
           </div>
+
 
           {/* Panel preview + clip reveal */}
           <div ref={maskRef} className="mt-10 rounded-2xl overflow-hidden border border-white/10">
