@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+body { overflow-x: hidden; }
+::selection { @apply bg-neutral-900 text-white; }
+
+
+html {
+  scroll-behavior: smooth;
+}
