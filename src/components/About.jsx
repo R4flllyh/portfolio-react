@@ -56,7 +56,7 @@ export default function About() {
           </p>
 
           <h2 className="text-[clamp(2rem,6vw,3.6rem)] font-semibold leading-[1.08] tracking-tight">
-            Building interfaces that feel effortless.
+            Building interfaces that feel <span className="text-[#d1f48b]">effortless</span>.
           </h2>
 
           <div className="mt-5 space-y-4 text-[21px] leading-relaxed text-neutral-300">

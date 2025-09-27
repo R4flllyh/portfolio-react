@@ -150,13 +150,13 @@ export default function Hero() {
             </p>
             <span
               ref={line1ARef}
-              className="block text-[clamp(2.2rem,6vw,4.2rem)]"
+              className="block text-[clamp(2.2rem,6vw,4.2rem)] font-bold"
             >
               Hi, I’m
             </span>
             <span
               ref={line1BRef}
-              className="block text-[clamp(2.2rem,6vw,4.2rem)] mt-1"
+              className="block text-[clamp(2.2rem,6vw,4.2rem)] mt-1 font-bold text-[#d1f48b]"
             >
               Muhammad Rafly Hidayahtullah
             </span>

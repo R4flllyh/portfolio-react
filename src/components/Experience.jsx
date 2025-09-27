@@ -116,7 +116,7 @@ export default function Experience() {
       ref={sectionRef}
       className="relative mx-auto max-w-6xl px-4 md:px-6 py-20 md:py-28"
     >
-      <SectionHead kicker="Experience" title="Pengalaman kerja & peran." />
+      <SectionHead kicker="Experience" title="Work Experience & Roles" />
 
       <div className="relative mt-10 md:mt-12 grid md:grid-cols-[1fr,3fr] gap-8 md:gap-12">
         {/* Timeline column */}
@@ -127,7 +127,7 @@ export default function Experience() {
           />
           <div
             ref={lineFillRef}
-            className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-emerald-400/80 origin-top"
+            className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-[#d1f48b] origin-top"
             style={{ transform: "scaleY(0)" }}
           />
           <div className="md:hidden h-1.5 w-20 rounded-full bg-neutral-800/60 dark:bg-neutral-200/10" />
@@ -144,7 +144,7 @@ export default function Experience() {
               {/* Dot (desktop) */}
               <span
                 ref={(el) => setDotRef(el, i)}
-                className="hidden md:block absolute -left-[1.125rem] top-6 h-2.5 w-2.5 rounded-full bg-emerald-400 ring-4 ring-emerald-400/20"
+                className="hidden md:block absolute -left-[1.125rem] top-6 h-2.5 w-2.5 rounded-full bg-[#d1f48b] ring-4 ring-emerald-400/20"
               />
 
               {/* Jika single-role */}
@@ -253,7 +253,7 @@ export default function Experience() {
                                 key={t}
                                 className="text-[12px] inline-flex items-center gap-2 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur px-3 py-1.5 text-neutral-700 dark:text-neutral-300"
                               >
-                                <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#d1f48b]" />
                                 {t}
                               </span>
                             ))}
