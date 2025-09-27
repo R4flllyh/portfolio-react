@@ -115,7 +115,7 @@ export default function About() {
         <div className="absolute inset-0 [background-image:linear-gradient(rgba(255,255,255,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.8)_1px,transparent_1px)] [background-size:48px_48px]" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-6xl px-4 md:px-6 py-24 md:py-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 md:px-6 py-24 md:py-32">
         <p className="text-[11px] uppercase tracking-[0.28em] text-white/60 mb-4">About</p>
 
         {/* Headline: bagian awal di-split, kata 'effortless' diberi accent sweep */}

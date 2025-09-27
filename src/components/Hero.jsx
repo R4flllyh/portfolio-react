@@ -154,7 +154,7 @@ export default function Hero() {
 
       {/* pinned scene */}
       <div ref={stageRef} className="relative h-screen overflow-hidden pt-20">
-        <div className="mx-auto max-w-6xl px-4 md:px-6 h-full flex flex-col justify-center">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 h-full flex flex-col justify-center">
           {/* kicker */}
           <p
             ref={kickerRef}
@@ -184,7 +184,7 @@ export default function Hero() {
               <div className="md:mt-0 mt-4">
               <h2
                 ref={subLeftRef}
-                className="text-[clamp(1.05rem,2.2vw,1.2rem)] leading-[1.3] text-neutral-300 md:max-w-[640px]"
+                className="text-[clamp(1.05rem,2.2vw,1.35rem)] leading-[1.3] text-neutral-300 md:max-w-[640px]"
               >
                 A Junior Frontend Developer based in Surabaya, Indonesia.
               </h2>

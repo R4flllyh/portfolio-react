@@ -114,7 +114,7 @@ export default function Experience() {
     <section
       id="experience"
       ref={sectionRef}
-      className="relative mx-auto max-w-6xl px-4 md:px-6 py-20 md:py-28"
+      className="relative mx-auto max-w-7xl px-4 md:px-6 py-20 md:py-28"
     >
         <SectionHead
         kicker="Experience"
