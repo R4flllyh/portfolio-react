@@ -179,38 +179,48 @@ export default function Quotes() {
   return (
     <section ref={sectionRef} id="quotes" className="relative bg-black text-white py-24 md:py-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        {/* Headline – biarkan teks bebas wrapping di mobile */}
-        <h2 className="text-[clamp(1.9rem,6vw,4.6rem)] font-bold leading-[1.1] tracking-tight">
-          <span ref={partARef} className="text-white">Every line</span>{" "}
-          <span ref={partBRef} className="text-neutral-400">of code</span>{" "}
-          <span ref={partCRef} className="text-white">is a step</span>{" "}
-          <span ref={partDRef} className="text-neutral-400">forward</span>{" "}
-          <span className="inline-block align-[-0.12em]">
-            <img
-              ref={wheelRef}
-              src="/src/assets/wheel_5.svg"
-              alt="wheel"
-              className="h-[1.1em] w-auto select-none pointer-events-none mt-4"
-              draggable="false"
-            />
-          </span>{" "}
-          {/* SWITCH: inline-grid supaya bisa wrap ke baris berikut saat sempit */}
-          <span
+        {/* Headline – responsive & mobile friendly */}
+        <h2 className="text-[clamp(1.5rem,5vw,4.6rem)] font-bold leading-tight sm:leading-[1.12] tracking-tight">
+        <div className="flex flex-wrap items-baseline gap-x-1 sm:gap-x-2">
+            
+            {/* ITEM 1: never wrap */}
+            <span className="shrink-0 whitespace-nowrap flex items-baseline gap-x-1 sm:gap-x-2">
+            <span ref={partARef} className="text-white">Every line</span>
+            <span ref={partBRef} className="text-neutral-400">of code</span>
+            <span ref={partCRef} className="text-white">is a step</span>
+            <span ref={partDRef} className="text-neutral-400">forward</span>
+            <span className="inline-block align-baseline">
+                <img
+                ref={wheelRef}
+                src="/src/assets/wheel_5.svg"
+                alt="wheel"
+                className="h-[0.9em] sm:h-[1em] w-auto inline-block align-[-0.15em] select-none pointer-events-none"
+                draggable="false"
+                />
+            </span>
+            </span>
+
+            {/* ITEM 2: switch area – can wrap per word */}
+            <span
             ref={switchWrapRef}
-            className="inline-grid align-baseline whitespace-normal text-[#d1f48b]"
-            style={{ gridTemplateAreas: '"stack"', gridAutoFlow: "row" }}
-          >
-            <span ref={(el) => setSwitchItem(el, 0)} className="[grid-area:stack]">
-              Learning
+            className="min-w-0 inline-grid align-baseline text-[#d1f48b]
+                        whitespace-normal [grid-template-areas:'stack']"
+            >
+            <span ref={(el) => setSwitchItem(el, 0)} className="[grid-area:stack] break-words">
+                {" "}Learning
             </span>
-            <span ref={(el) => setSwitchItem(el, 1)} className="[grid-area:stack]">
-              Improving
+            <span ref={(el) => setSwitchItem(el, 1)} className="[grid-area:stack] break-words">
+                {" "}Improving
             </span>
-            <span ref={(el) => setSwitchItem(el, 2)} className="[grid-area:stack]">
-              building better things
+            <span ref={(el) => setSwitchItem(el, 2)} className="[grid-area:stack] break-words">
+                {" "}building better things
             </span>
-          </span>
+            </span>
+        </div>
         </h2>
+
+
+
 
         {/* SVG underline – full width & responsif */}
         <div className="relative mt-10 md:mt-14">
