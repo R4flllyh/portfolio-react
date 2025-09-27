@@ -31,7 +31,7 @@ export default function Marquee({
 
   return (
     <div
-      className="overflow-hidden relative border-y border-neutral-200 dark:border-neutral-800 bg-gradient-to-r from-transparent via-neutral-50/5 to-transparent dark:via-white/5 select-none"
+      className="overflow-hidden relative border-y border-neutral-200 dark:border-neutral-800 bg-[#d1f48b] text-black dark:via-white/5 select-none"
       onMouseEnter={() => gsap.globalTimeline.pause()}
       onMouseLeave={() => gsap.globalTimeline.resume()}
     >

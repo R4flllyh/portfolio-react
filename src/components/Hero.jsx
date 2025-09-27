@@ -11,6 +11,7 @@ export default function Hero() {
 
   // refs
   const stageRef  = useRef(null);   // elemen yang dipin
+  const kickerRef = useRef(null);   // kicker
   const line1ARef = useRef(null);   // "Hi, I’m"
   const line1BRef = useRef(null);   // "Muhammad Rafly Hidayahtullah"
   const line2Ref  = useRef(null);   // subheadline
@@ -138,12 +139,15 @@ export default function Hero() {
       <div ref={stageRef} className="relative h-screen overflow-hidden pt-20">
         <div className="mx-auto max-w-6xl px-4 md:px-6 h-full flex flex-col justify-center">
           {/* kicker */}
-          <p className="text-[11px] uppercase tracking-[0.28em] text-neutral-400 mb-6">
+          {/* <p className="text-[11px] uppercase tracking-[0.28em] text-neutral-400 mb-6">
             Let me introduce myself
-          </p>
+          </p> */}
 
           {/* H1 berisi dua baris (masing2 akan di-split ke char) */}
           <h1 className="font-semibold tracking-tight leading-[1.06]">
+            <p ref={kickerRef} className="text-[11px] uppercase tracking-[0.28em] text-neutral-400 mb-6">
+              Let me introduce myself
+            </p>
             <span
               ref={line1ARef}
               className="block text-[clamp(2.2rem,6vw,4.2rem)]"

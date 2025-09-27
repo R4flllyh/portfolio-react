@@ -94,7 +94,7 @@ export default function Projects() {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative scroll-mt-24 mx-auto max-w-6xl px-4 md:px-6 py-20 md:py-28"
+      className="relative z-10 scroll-mt-24 mx-auto max-w-6xl px-4 md:px-6 py-20 md:py-28"
     >
       <SectionHead
         kicker="Selected Work"
