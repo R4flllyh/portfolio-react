@@ -18,8 +18,8 @@ const EXPERIENCES = [
         location: "Sidoarjo, Indonesia", 
         period: "Oct 2022 — Mar 2023 · 6 mos", 
         employment: "Internship", 
-        summary: "Implemented designs and components, contributed to layout systems and accessibility.", highlights: ["UI/UX Implementation", "Figma Design"], 
-        stack: ["WordPress", "Figma"], 
+        summary: "Implemented designs and components, contributed to layout systems and accessibility.",
+        stack: ["WordPress", "Figma", "UI/UX"], 
     }, 
     { 
         role: "WordPress Developer", 
@@ -27,8 +27,7 @@ const EXPERIENCES = [
         location: "Sidoarjo, Indonesia", 
         period: "Mar 2023 — Dec 2024 · 1 yr 10 mos", 
         employment: "Freelance", 
-        summary: "Delivered client sites with clean UI, performance tuning, and maintainable theme structures.", 
-        highlights: ["UI/UX Design", "Figma Prototyping"], 
+        summary: "Delivered client sites with clean UI, performance tuning, and maintainable theme structures.",  
         stack: ["WordPress", "Figma"], 
 
     }, 
@@ -39,8 +38,7 @@ const EXPERIENCES = [
         period: "Feb 2025 — Present · 8 mos", 
         employment: "Internship", 
         summary: "Contributing to the development and maintenance of the foundation’s digital platforms with a focus on frontend technologies.", 
-        highlights: [ "Customized WordPress themes.", "Collaborated with backend developers to integrate Laravel-based features.", ],
-        stack: ["WordPress", "Laravel"],
+        stack: ["WordPress", "Laravel", "Tailwind CSS", "Figma", "Flutter", "Dart", "Git", "Filament"],
 
     },
 ];
@@ -49,7 +47,6 @@ export default function Experience() {
   const reduce = usePrefersReducedMotion();
 
   const sectionRef = useRef(null);
-  const lineBgRef = useRef(null);
   const lineFillRef = useRef(null);
   const listRef = useRef(null);
   const itemsRef = useRef([]);
@@ -126,154 +123,109 @@ export default function Experience() {
         />
 
       <div className="relative mt-10 md:mt-12 grid md:grid-cols-[1fr,3fr] gap-8 md:gap-12">
-        {/* Timeline column */}
+        {/* TIMELINE (kolom kiri) */}
         <div className="relative">
-          <div
-            ref={lineBgRef}
-            className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-neutral-800/60 dark:bg-neutral-200/10"
-          />
-          <div
+        {/* garis background */}
+        <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-white/10" />
+        {/* garis progress */}
+        <div
             ref={lineFillRef}
-            className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-[#d1f48b] origin-top"
+            className="hidden md:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px origin-top bg-[#d1f48b]"
             style={{ transform: "scaleY(0)" }}
-          />
-          <div className="md:hidden h-1.5 w-20 rounded-full bg-neutral-800/60 dark:bg-neutral-200/10" />
+        />
+        {/* mobile hint */}
+        <div className="md:hidden h-1.5 w-20 rounded-full bg-white/10" />
         </div>
 
-        {/* Items */}
-        <ol ref={listRef} className="space-y-8 md:space-y-10">
-          {EXPERIENCES.map((exp, i) => (
+        {/* LIST KARTU */}
+        <ol ref={listRef} className="space-y-6 md:space-y-8">
+        {EXPERIENCES.map((exp, i) => (
             <li
-              key={i}
-              ref={(el) => setItemRef(el, i)}
-              className="relative rounded-2xl border border-neutral-200/70 dark:border-neutral-800/80 bg-white/60 dark:bg-neutral-900/50 backdrop-blur p-5 md:p-6"
+            key={i}
+            ref={(el) => setItemRef(el, i)}
+            className={`
+                relative rounded-3xl border border-white/10 
+                bg-gradient-to-b from-white/[0.06] to-white/[0.03] 
+                dark:from-white/[0.04] dark:to-white/[0.02]
+                p-6 md:p-7
+                shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_12px_30px_-12px_rgba(0,0,0,0.45)]
+                hover:shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_18px_40px_-10px_rgba(0,0,0,0.6)]
+                transition-shadow duration-300
+            `}
             >
-              {/* Dot (desktop) */}
-              <span
+            {/* dot timeline */}
+            <span
                 ref={(el) => setDotRef(el, i)}
-                className="hidden md:block absolute -left-[1.125rem] top-6 h-2.5 w-2.5 rounded-full bg-[#d1f48b] ring-4 ring-emerald-400/20"
-              />
+                className="hidden md:block absolute -left-[38px] top-7 h-2.5 w-2.5 rounded-full bg-[#d1f48b]
+                        ring-4 ring-[#d1f48b]/25 shadow-[0_0_24px_0_rgba(209,244,139,0.45)]"
+            />
 
-              {/* Jika single-role */}
-              {!exp.roles && (
-                <>
-                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
-                    <h3 className="text-lg md:text-xl font-semibold tracking-tight">
-                      {exp.role}
-                    </h3>
-                    {exp.employment && (
-                      <>
-                        <span className="text-sm text-neutral-500">·</span>
-                        <span className="text-sm text-neutral-500">
-                          {exp.employment}
-                        </span>
-                      </>
-                    )}
-                    <span className="text-sm text-neutral-500">·</span>
-                    <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                      {exp.company} — {exp.location}
+            {/* header */}
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
+                <h3 className="text-[18px] md:text-[19px] font-semibold tracking-tight">
+                {exp.role}
+                </h3>
+
+                {exp.employment && (
+                <span className="text-sm text-white/60">· {exp.employment}</span>
+                )}
+
+                <span className="ml-auto text-sm text-white/60">
+                {exp.period}
+                </span>
+            </div>
+            <span className="text-sm text-white/70">
+                {exp.company} — {exp.location}
+            </span>
+
+            {/* summary */}
+            {exp.summary && (
+                <p className="mt-3 text-[15px] leading-relaxed text-neutral-300/90">
+                {exp.summary}
+                </p>
+            )}
+
+            {/* chips */}
+            {(exp.highlights?.length || exp.stack?.length) && (
+                <div className="mt-4 flex flex-wrap gap-2.5">
+                {/* highlight chips */}
+                {exp.highlights?.map((h, idx) => (
+                    <span
+                    key={`h-${idx}`}
+                    className="px-3 py-1.5 text-[13px] rounded-xl
+                                bg-white/[0.06] border border-white/10
+                                text-neutral-200
+                                hover:bg-white/[0.08] transition"
+                    >
+                    {h}
                     </span>
-                    <span className="ml-auto text-sm text-neutral-500">
-                      {exp.period}
+                ))}
+
+                {/* stack chips (dengan indikator) */}
+                {exp.stack?.map((t) => (
+                    <span
+                    key={t}
+                    className="inline-flex items-center gap-2 px-3 py-1.5 text-[12px] rounded-xl
+                                bg-white/[0.05] border border-white/10
+                                text-neutral-200"
+                    >
+                    <span className="relative inline-flex h-1.5 w-1.5">
+                        <span className="absolute inset-0 rounded-full bg-[#d1f48b]/70" />
+                        <span className="absolute inset-0 rounded-full bg-[#d1f48b]/70 blur-[2px] opacity-50" />
                     </span>
-                  </div>
-
-                  {exp.summary && (
-                    <p className="mt-3 text-[15px] leading-relaxed text-neutral-700 dark:text-neutral-300">
-                      {exp.summary}
-                    </p>
-                  )}
-
-                  {(exp.highlights?.length > 0 || exp.stack?.length > 0) && (
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {exp.highlights?.map((h, idx) => (
-                        <span
-                          key={`h-${idx}`}
-                          className="text-[13px] px-2.5 py-1 rounded-lg border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 bg-white/60 dark:bg-neutral-900/60"
-                        >
-                          {h}
-                        </span>
-                      ))}
-                      {exp.stack?.map((t) => (
-                        <span
-                          key={t}
-                          className="text-[12px] inline-flex items-center gap-2 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur px-3 py-1.5 text-neutral-700 dark:text-neutral-300"
-                        >
-                          <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </>
-              )}
-
-              {/* Jika multi-role di satu perusahaan */}
-              {exp.roles && (
-                <>
-                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-2">
-                    <h3 className="text-lg md:text-xl font-semibold tracking-tight">
-                      {exp.company}
-                    </h3>
-                    <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                      — {exp.location}
+                    {t}
                     </span>
-                    <span className="ml-auto text-sm text-neutral-500">
-                      {exp.period}
-                    </span>
-                  </div>
+                ))}
+                </div>
+            )}
 
-                  {exp.summary && (
-                    <p className="mt-2 text-[15px] leading-relaxed text-neutral-700 dark:text-neutral-300">
-                      {exp.summary}
-                    </p>
-                  )}
-
-                  <div className="mt-4 space-y-4">
-                    {exp.roles.map((r, idx) => (
-                      <div
-                        key={idx}
-                        className="rounded-xl border border-neutral-200 dark:border-neutral-800 p-4 bg-white/50 dark:bg-neutral-900/50"
-                      >
-                        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                          <span className="font-medium">{r.title}</span>
-                          {r.employment && (
-                            <span className="text-sm text-neutral-500">· {r.employment}</span>
-                          )}
-                          <span className="ml-auto text-sm text-neutral-500">
-                            {r.period}
-                          </span>
-                        </div>
-
-                        {(r.highlights?.length > 0 || r.stack?.length > 0) && (
-                          <div className="mt-2 flex flex-wrap gap-2">
-                            {r.highlights?.map((h, i2) => (
-                              <span
-                                key={`rh-${i2}`}
-                                className="text-[13px] px-2.5 py-1 rounded-lg border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 bg-white/60 dark:bg-neutral-900/60"
-                              >
-                                {h}
-                              </span>
-                            ))}
-                            {r.stack?.map((t) => (
-                              <span
-                                key={t}
-                                className="text-[12px] inline-flex items-center gap-2 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white/60 dark:bg-neutral-900/60 backdrop-blur px-3 py-1.5 text-neutral-700 dark:text-neutral-300"
-                              >
-                                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#d1f48b]" />
-                                {t}
-                              </span>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
+            {/* decorative subtle gradient edge */}
+            <div className="pointer-events-none absolute inset-x-0 -bottom-px h-px 
+                            bg-gradient-to-r from-transparent via-white/15 to-transparent" />
             </li>
-          ))}
+        ))}
         </ol>
+
       </div>
     </section>
   );

@@ -139,7 +139,7 @@ export default function About() {
 
         <div className="mt-6 space-y-4 text-[18px] md:text-[21px] leading-relaxed text-neutral-300">
           <p ref={(el) => (parasRef.current[0] = el)}>
-            I’m <span className="font-semibold">Muhammad Rafly Hidayahtullah</span>, a passionate junior developer based in Surabaya, Indonesia. I love building web and mobile applications with Flutter & Laravel, designing clean interfaces with Tailwind, and exploring UI/UX using Figma.
+            I’m <span className="font-semibold text-white">Muhammad Rafly Hidayahtullah</span>, a passionate junior developer based in Surabaya, Indonesia. I love building web and mobile applications with Flutter & Laravel, designing clean interfaces with Tailwind, and exploring UI/UX using Figma.
           </p>
           <p ref={(el) => (parasRef.current[1] = el)}>
             I enjoy turning ideas into functional products and am always excited to collaborate and learn something new.

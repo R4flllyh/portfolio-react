@@ -181,7 +181,7 @@ export default function Hero() {
 
             {/* Baris 2: kiri (subheadline) — kanan (Hidayahtullah) */}
             <div className="mt-3 flex flex-col-reverse md:flex-row md:items-start md:justify-between gap-3">
-              <div className="md:mt-0 mt-4">
+              <div className="md:mt-10 mt-4">
               <h2
                 ref={subLeftRef}
                 className="text-[clamp(1.05rem,2.2vw,1.35rem)] leading-[1.3] text-neutral-300 md:max-w-[640px]"

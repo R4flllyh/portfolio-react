@@ -11,6 +11,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Quotes from "./components/Quotes";
 import "./index.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -33,6 +34,7 @@ export default function App() {
       <About />
       <Experience />
       <Projects />
+      <Quotes />
       <Contact />
       <Footer />
     </div>
