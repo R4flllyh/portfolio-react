@@ -97,7 +97,7 @@ export default function Projects() {
       className="relative z-10 scroll-mt-24 mx-auto max-w-6xl px-4 md:px-6 py-20 md:py-28"
     >
       <SectionHead
-        kicker="Selected Work"
+        kicker="Projects"
         title="Modern interfaces, production-ready."
         right={<a href="#" className="underline underline-offset-4">All projects</a>}
       />

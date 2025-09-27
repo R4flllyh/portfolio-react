@@ -116,7 +116,14 @@ export default function Experience() {
       ref={sectionRef}
       className="relative mx-auto max-w-6xl px-4 md:px-6 py-20 md:py-28"
     >
-      <SectionHead kicker="Experience" title="Work Experience & Roles" />
+        <SectionHead
+        kicker="Experience"
+        title={
+            <>
+            Work <span className="text-[#d1f48b]">Experience & Roles</span>
+            </>
+        }
+        />
 
       <div className="relative mt-10 md:mt-12 grid md:grid-cols-[1fr,3fr] gap-8 md:gap-12">
         {/* Timeline column */}

@@ -156,7 +156,7 @@ export default function Hero() {
             </span>
             <span
               ref={line1BRef}
-              className="block text-[clamp(2.2rem,6vw,4.2rem)] mt-1 font-bold text-[#d1f48b]"
+              className="block text-[clamp(3rem,6vw,7rem)] mt-1 font-bold text-[#d1f48b]"
             >
               Muhammad Rafly Hidayahtullah
             </span>
@@ -182,7 +182,7 @@ export default function Hero() {
           <div ref={ctaRef} className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#projects"
-              className="group inline-flex items-center justify-center h-12 px-6 rounded-full text-[15px] font-medium 
+              className="group inline-flex items-center justify-center h-12 px-6 rounded-lg text-[15px] font-medium 
                         border border-white/80 text-white bg-transparent 
                         hover:bg-white hover:text-black transition-all duration-300 ease-out 
                         shadow-[0_0_0_0_rgba(255,255,255,0)] hover:shadow-[0_0_20px_2px_rgba(255,255,255,0.25)]"
@@ -191,7 +191,7 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="group inline-flex items-center justify-center h-12 px-6 rounded-full text-[15px] font-medium 
+              className="group inline-flex items-center justify-center h-12 px-6 rounded-lg text-[15px] font-medium 
                         border border-white/30 text-white/80 bg-transparent 
                         hover:border-white hover:text-white hover:bg-white/10 
                         transition-all duration-300 ease-out"
@@ -207,9 +207,6 @@ export default function Hero() {
               ref={panelRef}
               className="aspect-[16/7] bg-gradient-to-b from-neutral-900 to-neutral-800 grid place-items-center"
             >
-              <span className="text-3xl md:text-5xl font-semibold tracking-tight text-neutral-200">
-                rafly.dev
-              </span>
             </div>
           </div>
         </div>

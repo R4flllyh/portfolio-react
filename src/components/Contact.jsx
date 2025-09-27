@@ -76,7 +76,14 @@ export default function Contact() {
       ref={sectionRef}
       className="relative mx-auto max-w-6xl px-4 md:px-6 py-20 md:py-28"
     >
-      <SectionHead kicker="Contact" title="Let’s build something modern." />
+      <SectionHead
+        kicker="Contact"
+        title={
+          <>
+            Let's <span className="text-[#d1f48b]">build</span> something modern.
+          </>
+        }
+      />
       {/* underline dekor sederhana */}
       <div
         ref={underlineRef}
